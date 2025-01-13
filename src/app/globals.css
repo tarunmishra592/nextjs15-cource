@@ -2,17 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Default Link Styles */
+a {
+  @apply text-blue-600 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+a:visited {
+  @apply text-purple-600;
 }
+
+a:active {
+  @apply text-blue-800;
+}
+
+
+/* Default Heading Styles */
+h1 {
+  @apply text-4xl font-bold text-gray-900 tracking-tight mt-8 mb-4;
+}
+
+h2 {
+  @apply text-3xl font-semibold text-gray-800 tracking-tight mt-6 mb-3;
+}
+
+h3 {
+  @apply text-2xl font-medium text-gray-700 tracking-tight mt-5 mb-3;
+}
+
+h4 {
+  @apply text-xl font-medium text-gray-600 tracking-tight mt-4 mb-2;
+}
+
+h5 {
+  @apply text-lg font-medium text-gray-500 tracking-tight mt-3 mb-2;
+}
+
+h6 {
+  @apply text-base font-medium text-gray-400 tracking-tight mt-2 mb-2;
+}
+/* Default Button Styles */
+button {
+  @apply px-6 py-2 rounded-md font-medium focus:outline-none;
+}
+
+button.primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 focus:ring-2 focus:ring-blue-500;
+}
+
+button.secondary {
+  @apply bg-gray-300 text-gray-800 hover:bg-gray-400 active:bg-gray-500 focus:ring-2 focus:ring-gray-400;
+}
+
+button.disabled {
+  @apply bg-gray-200 text-gray-400 cursor-not-allowed;
+}
+
 
 body {
   color: var(--foreground);
