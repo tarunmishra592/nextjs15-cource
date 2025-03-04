@@ -1,6 +1,5 @@
 import Link from "next/link";
 import './globals.css'
-import { ErrorWrapper } from "./GlobalError";
 
 const navigations = [
   { title: 'About', href:'/about' },
