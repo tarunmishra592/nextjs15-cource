@@ -1,6 +1,14 @@
+import { auth, currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 
 export default async function About(){
+
+  const authObj = await auth()
+  const userObj = await currentUser()
+
+  console.log(authObj)
+  console.log(userObj)
+
     return(
         <div className="min-h-screen bg-gray-900 flex justify-center items-center p-6">
       <div className="bg-gray-300 p-8 rounded-lg shadow-lg w-full max-w-3xl text-center">

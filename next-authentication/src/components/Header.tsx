@@ -1,4 +1,4 @@
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 export default function Header(){
@@ -15,9 +15,12 @@ export default function Header(){
         </ul>
       </nav>
       <SignedOut>
-        <SignInButton mode="modal">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Login</button>
+        <SignInButton>
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Sign In</button>
         </SignInButton>
+        <SignUpButton>
+        <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Sign Up</button>
+        </SignUpButton>
       </SignedOut>
       <UserButton/>
     </header>

@@ -22,3 +22,13 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.auth-container .cl-signIn-root{
+  margin: auto;
+}
+
+.auth-container .cl-signUp-root{
+  margin: auto;
+}
+
+

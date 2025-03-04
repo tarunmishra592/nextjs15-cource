@@ -1,4 +1,5 @@
 'use client'
+import { useAuth, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import React from "react";
 import { Bar } from "recharts";
@@ -13,6 +14,10 @@ const data = [
 ];
 
 export default function Dashboard(){
+
+  // const { isLoaded, sessionId, getToken, userId } = useAuth()
+  const { isLoaded, isSignedIn, user } = useUser()
+
   return (
     <div className="min-h-screen bg-gray-900 p-6">
       <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
